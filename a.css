@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: '微軟正黑體';
+    overflow-x: hidden;
+    color:var(--body--color) ;
+    background-color: var(--body--bg);
+    transition: all .3s linear;
+}
+:root{
+    --bg--color1:#79AC78;
+    --bg--color2:#E9B824;
+    --body--bg:#fff;
+    --body--color:#000;
+    --fs--title:80px;
+    --fs--1:70px;
+    --fs--2:60px;
+    --fs--3:50px;
+    --fs--4:40px;
+    --fs--5:30px;
+    --fs--6:23px;
+    --fs--7:20px;
+}
+a{
+    text-decoration: none;
+}
+input{
+    outline: none;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.color1{
+    color: var(--bg--color1);
+}
+.color2{
+    color: var(--bg--color2);
+}
+.df{
+    display: flex;
+}
+.jcc{
+    justify-content: center;
+}
+.aic{
+    align-items: center;
+}
+.fdc{
+    flex-direction: column;
+}
+.jcb{
+    justify-content: space-between;
+}
+.f-title{
+    font-size: var(--fs--title);
+}
+.f1{
+    font-size: var(--fs--1);
+}
+.f2{
+    font-size: var(--fs--2);
+}
+.f3{
+    font-size: var(--fs--3);
+}
+.f4{
+    font-size: var(--fs--4);
+}
+.f5{
+    font-size: var(--fs--5);
+}
+.f6{
+    font-size: var(--fs--6);
+}
+.f7{
+    font-size: var(--fs--7);
+}
+.lep{
+    letter-spacing: 2px;
+}
+.lh{
+    line-height: 2;
+}
+.taj{
+    text-align: justify;
+}
+.btn{
+    --bs-btn-color: var(--bg--color2);
+    --bs-btn-border-color: var(--bg--color2);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg:var(--bg--color2);
+    --bs-btn-active-color:#fff;
+    --bs-btn-active-bg:var(--bg--color2);
+    font-weight: bold;
+}
+
+nav{
+    background-color: var(--bg--color1);
+}
+.nav-icon{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+.nav-icon:hover{
+    transform: rotate(360deg);
+}
+.nav-item{
+    position: relative;
+}
+.nav-item::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg--color2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s linear;
+}
+.nav-item::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    background-color: var(--bg--color2);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+.nav-item:hover.nav-item::after{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+.nav-item:hover.nav-item::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.top-btn,.robot-btn,.fs-btn{
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg--color2);
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+}
+.top-btn img,.robot-btn img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.robot-btn{
+    bottom: 130px;
+}
+.fs-btn{
+    bottom: 210px;
+    color: #fff;
+    font-size: var(--fs--7);
+}
+
+.robot-box{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 90px;
+    bottom: 170px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 3px solid var(--bg--color1);
+    z-index: 999;
+    transform: scale(0);
+    transform-origin: right bottom;
+    transition: all .3s linear;
+}
+.robot-box.active{
+    transform: scale(1);
+}
+.robot-header{
+    padding: 10px;
+    border-bottom: 3px solid var(--bg--color1);
+}
+.robot-body{
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+.robot-footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 3px solid var(--bg--color1);
+}
+
+.robot-mess,.robot-mess2{
+    padding: 10px;
+    display: block;
+    background-color: var(--bg--color1);
+    border-radius: 0 5px 5px 5px;
+}
+.robot-mess2{
+    border-radius: 5px 0 5px 5px;
+}
+.robot-input{
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+.robot-submit{
+    background: var(--bg--color2);
+    color: #fff;
+}

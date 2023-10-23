@@ -1,0 +1,30 @@
+@media(max-width:1080px){
+    .head-ul,.head-ul2{
+        width: 100%;
+        height: 100px;
+        margin: 5px 0;
+    }
+    .head-ul li,.head-ul2 li{
+        width: 33.3333%;
+        height: 100%;
+        margin: 0 5px;
+        border-radius: 5px;
+        background-position: center;
+        background-size: cover;
+    }
+    .head_contnt{
+        margin-top: 150px;
+    }
+    .head-title{
+        font-size: 3em;
+    }
+    a-scene{
+        display: none !important;
+    }
+    .body2-card-swiper .swiper-slide{
+        transition: all .3s linear;
+    }
+    .body2-card-swiper .swiper-slide-prev,.body2-card-swiper .swiper-slide-next{
+        transform: scale(0.9);
+    }
+}

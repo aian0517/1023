@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歷史之旅</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./a.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/chart.umd.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <script src="./js/aframe-v1.4.2.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-3 navbar-dark fixed-top">
+        <div class="container-fluid col-lg-10 col-12">
+            <a href="index.html" class="navbar-brand f5 mx-auto">寶島慢播假日市集</a>
+            <div class="nav order-lg-2 order-0">
+                <!-- <a href="#body6" class="nav-link df jcc aic" >
+                    <img src="./img/nav/nav-icon-message.png" alt="" class="nav-icon">
+                </a> -->
+                <!-- <a href="#body4'" class="nav-link df jcc aic">
+                    <img src="./img/nav/nav-icon-shop.png" alt="" class="nav-icon">
+                </a> -->
+                <div class="nav-link df jcc aic nav-login text-light ">
+                    <img src="./img/nav/nav-icon-login.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic" onclick="window.open('index.html','_blank','top=150,left=150,width=500px,height=750px')">
+                    <img src="./img/nav/nav-icon-phone.png" alt="" class="nav-icon" 
+                    >
+                </div>
+                <div class="nav-link df jcc aic" onclick="sun()">
+                    <img src="./img/nav/nav-icon-sun.png" alt="" class="nav-icon nav-icon-sun" >
+                </div>
+                <div class="nav-link df jcc aic" data-bs-toggle="modal" data-bs-target="#no-wifi">
+                    <img src="./img/nav/nav-icon-wifi.png" alt="" class="nav-icon" >
+                </div>
+            </div>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a href="index.html" class="nav-link f7">首頁</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body1" class="nav-link f7">活動資訊</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body2" class="nav-link f7">主題特色</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        
+    </header>
+    <main>
+        <section id="body1">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">活動<span class="color2 f-title">資訊</span></h1>
+                    <div class="col-lg-4 col-12 position-relative">
+                        <img src="./img/body2/img.png" alt="" class="body2-img">
+                        <div class="body2-text px-3">
+                            <h1 class="fw-bold f4 mb-3 body2-title">飾品創作工作坊活動</h1>
+                            <p class="f7 body2-p">慢播市集提供不同時代風格的飾品創作工作坊，包括古典、
+                                文藝復興和近代風格。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <h1 class="f2">特色攤位</h1>
+                    </div>
+                    <div class="col-lg-4 col-12">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <a href="#top" class="top-btn">
+        <img src="./img/箭頭.png" alt="">
+    </a>
+    <div class="robot-btn">
+        <img src="./img/機器人.png" alt="">
+    </div>
+    <div class="fs-btn" onclick="fs_click()">
+        A
+    </div>
+
+    <div class="robot-box">
+        <div class="robot-header">
+            <h1 class="m-0 f5 fw-bold text-center">寶島慢播機器人</h1>
+        </div>
+        <div class="robot-body text-light">
+            <p>
+                <span class="robot-mess">
+                    您好~我是寶島慢播機器人，有任何的問題都可詢問我喔^_^
+                </span>
+            </p>
+        </div>
+        <div class="robot-footer">
+            <input type="text" class="robot-input" placeholder="請輸入內容" list="robot-datalist">
+            <datalist id="robot-datalist">
+                <option value="關於我們"></option>
+                <option value="每週主題"></option>
+                <option value="主題特色"></option>
+            </datalist>
+            <button class="robot-submit btn">送出</button>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade text-dark" id="no-wifi">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="f5 m-0 fw-bold">網站顯示</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">您目前尚未連接網路，請帶連接後再試一次</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="login">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">登入帳號</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">帳號：</label>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" placeholder="電子郵件">
+                            <label for="">電子郵件或電話號碼</label>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">密碼：</label>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" placeholder="電子郵件" required>
+                            <label for="">密碼</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn login-btn" data-bs-dismiss="modal">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="logout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">帳號資訊</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">目前尚未連線網路，無法常看帳號相關資訊</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal" onclick="logout()">登出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/a.js"></script>
+</body>
+</html>

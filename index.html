@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寶島慢播假日市集</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/chart.umd.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <script src="./js/TextPlugin.min.js"></script>
+    <script src="./js/aframe-v1.4.2.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <!-- load -->
+    <!-- <div class="load-box">
+        <img src="./img/load/load-bg.png" alt="" class="load-bg">
+        <img src="./術科模擬試題用圖片檔/market_pic01.JPG" alt="" class="load-bg2">
+        <div class="eee">
+            <img src="./img/load/箭頭.png" alt="" class="load-img">
+            <p class="m-0 text-light f6 fw-bold">向下滾動</p>
+        </div>
+    </div> -->
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg py-3 navbar-dark fixed-top">
+        <div class="container-fluid col-lg-10 col-12">
+            <a href="index.html" class="navbar-brand f5 mx-auto">寶島慢播假日市集</a>
+            <div class="nav order-lg-2 order-0">
+                <a href="#body6" class="nav-link df jcc aic">
+                    <img src="./img/nav/nav-icon-message.png" alt="" class="nav-icon">
+                </a>
+                <!-- <a href="#body4'" class="nav-link df jcc aic">
+                    <img src="./img/nav/nav-icon-shop.png" alt="" class="nav-icon">
+                </a> -->
+                <div class="nav-link df jcc aic nav-login text-light ">
+                    <img src="./img/nav/nav-icon-login.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic"
+                    onclick="window.open('index.html','_blank','top=150,left=150,width=500px,height=750px')">
+                    <img src="./img/nav/nav-icon-phone.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic" onclick="sun()">
+                    <img src="./img/nav/nav-icon-sun.png" alt="" class="nav-icon nav-icon-sun">
+                </div>
+                <div class="nav-link df jcc aic" data-bs-toggle="modal" data-bs-target="#no-wifi">
+                    <img src="./img/nav/nav-icon-wifi.png" alt="" class="nav-icon">
+                </div>
+            </div>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a href="index.html" class="nav-link f7">首頁</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body1" class="nav-link f7">關於我們</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body2" class="nav-link f7">每週主題</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body3" class="nav-link f7">活動日歷</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body5" class="nav-link f7">統計資訊</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body6" class="nav-link f7">服務中心</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- header -->
+    <header>
+        <img src="./img/圈文字.png" alt="" class="head-img">
+        <div id="head-carousel" class="carousel slide carousel-fade abc" data-bs-ride="carousel" data-bs-pause="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/header/img-bg.png" alt="" class="head-bg">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/header/img-bg2.png" alt="" class="head-bg">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/header/img-bg3.png" alt="" class="head-bg">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#head-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#head-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="container-fluid col-lg-10 col-12 text-light">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-lg-0 mb-3 df jcc aic">
+                    <div class="head_contnt">
+                        <h1 class="head-title fw-bold">寶島慢播假日市集</h1>
+                        <p class="f5 lh lep text-center head-text fw-bold">
+                            <span class="color2">慢動作探索城市，品味初秋思愁</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <a-scene embedded vr-mode-ui="false" keyboard-shortcuts="enterVR:false">
+                        <a-box src="./img/header/a-img.png"
+                            animation="property:rotation;to:0 360 0;dur:10000;loop:true;easing:linear"></a-box>
+                        <a-camera position="0 0 1.4"></a-camera>
+                    </a-scene>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--main  -->
+    <main>
+        <section id="body1">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 text-center fw-bold py-5 color1 title">關於<span class="color2 f-title">我們</span></h1>
+                    <div class="col-12 mb-lg-5">
+                        <p class="f7 taj lh lep fw-bold">
+                            在這個數位浪潮的後疫情時代，我們為「躺平」的生活節奏而打造㇐個令人期待的市集
+                            活動 - <span class="color2 f6">「寶島慢播假日市集」</span>。“慢播”意指將生活以<span
+                                class="color2 f6">慢動作</span>播放，讓我們重新體會每
+                            個細節。 <br>
+                            「假日市集活動」旨在打破文化的隔閡，我們設計了㇐個線上空間，讓人們能夠
+                            輕鬆<span class="color2 f6">探索市集淺讀</span>、當地的相關<span class="color2 f6">文化活動</span>、<span
+                                class="color2 f6">藝術展示</span>和<span class="color2 f6">音樂表演</span>。
+                            此外，這個平台也可以作為社區交流的橋樑，讓人們能夠分享他們的⽂化經驗，<span class="color2 f6">建立聯繫</span>，<span
+                                class="color2 f6">傳播信息</span>，並創造美好的體驗。
+
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper body1-swiper">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="body2">
+            <div class="container py-3">
+                <div class="row py-5">
+                    <h1 class="py-5 f1 fw-bold text-center color1 title2">每週<span class="color2 f-title">主題</span></h1>
+                    <div class="col-12 mb-lg-3 mb-3">
+                        <div class="swiper body2-swiper">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper body2-card-swiper">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 df jcc aic my-3">
+                        <a href="a.html" class="body2-a btn">點我查看更多歷史之旅活動資訊</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="body3">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 text-center fw-bold py-5 color1 title">活動<span class="color2 f-title">日曆</span></h1>
+                    <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                        <table class="table table-bordered" style="line-height: 50px;">
+                            <thead>
+                                <tr>
+                                    <th>週次</th>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <th class="body3-click" onclick="body3_click(event)">第一週</th>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td class="body3-click" onclick="body3_click(event)">6</td>
+                                <td class="body3-click" onclick="body3_click(event)">7</td>
+                            </tr>
+                            <tr>
+                                <th class="body3-click" onclick="body3_click(event)">第二週</th>
+                                <td class="body3-click" onclick="body3_click(event)">8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td class="body3-click" onclick="body3_click(event)">14</td>
+                            </tr>
+                            <tr>
+                                <th class="body3-click" onclick="body3_click(event)">第三週</th>
+                                <td class="body3-click" onclick="body3_click(event)">15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td class="body3-click" onclick="body3_click(event)">20</td>
+                                <td class="body3-click" onclick="body3_click(event)">21</td>
+                            </tr>
+                            <tr>
+                                <th class="body3-click" onclick="body3_click(event)">第四週</th>
+                                <td class="body3-click" onclick="body3_click(event)">22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td class="body3-click" onclick="body3_click(event)">27</td>
+                                <td class="body3-click" onclick="body3_click(event)">28</td>
+                            </tr>
+                            <tr>
+                                <th>第五週</th>
+                                <td class="body3-click" onclick="body3_click(event)">29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td style="opacity: 0.4;">1</td>
+                                <td style="opacity: 0.4;">2</td>
+                                <td style="opacity: 0.4;">3</td>
+                                <td style="opacity: 0.4;">4</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="body3-right text-light p-3 ">
+                            <p class="f5 fw-bold">寶島慢播假日市集</p>
+                            <h1 class="f3 fw-bold text-center">2023年<br>
+                                10月份活動日歷</h1>
+                            <p class="f7">點擊以查看當週、日活動</p>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="body3">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold text-center lep title3 color1">表演<span class="color2 f-title">項目</span></h1>
+                    <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                        <p class="f7 lh lep body3-text">歡迎大家參加我們「歷史之旅」主題週的精彩活動！在
+                            這個主題週的舞台上，我們將有專業的故事講述者為您呈現城市的歷史故事。這是
+                            一次穿越時光的機會，讓您沉浸在城市的過去，聆聽傳說和故事，感受歷史的魅力。
+                        </p>
+                        <p class="f7 lh lep fw-bold body3-text2">
+                            第一個舞台表演：
+                            週五晚上 7:00 - 9:00 <br>
+                            第二個舞台表演：
+                            週六上午 10:00 - 上午12:00 <br>
+                            第三個舞台表演：
+                            週日下午 2:00 - 下午4:00
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="body3-img-box">
+                            <img src="./img/body3/img.png" alt="" class="body3-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- <section id="body4">
+            <div class="container-fluid py-5">
+                <div class="row py-5">
+                    <h1 class="py-5 f1 fw-bold text-center body4-title title4 color1">主題<span class="color2 f-title">特色</span></h1>
+                    <div class="swiper body4-swiper swiper-no-swiping">
+                        <div class="swiper-wrapper body4-swiper-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section id="body5">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold text-center title5 color1">統計<span class="color2 f-title">資訊</span></h1>
+                    <div class="col-lg-6 col-12">
+                        <h1 class="py-3 fw-bold">討論區</h1>
+                        <div class="swiper body5-swiper">
+                            <div class="swiper-wrapper">
+                            </div>
+                            <div class="swiper-pagination body5-pagination"></div>
+                            <div class="swiper-button-next body5-swiper-next"></div>
+                            <div class="swiper-button-prev body5-swiper-prev"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <canvas id="body5-chart" class="mb-5"></canvas>
+                        <p class="f6 fw-bold">由上圖可知第二週的<span class="color2 f5">「城市大自然」</span>參加人數較多，其次是第四週的<span
+                                class="color2 f5">「多元文化探索」</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="body6" class="text-dark">
+            <div class="container-fluid col-lg-8 col-12 py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 title6">服務<span class="color2 f-title">中心</span></h1>
+                    <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                        <div class="body6-left p-lg-5 p-2">
+                            <h1 class="py-4 f4 color2 fw-bold">交通方式</h1>
+                            <div class="df py-3">
+                                <div class="serve-btn-box"></div>
+                                <div class="p-3 serve-box w-100 df jcc align-items-start">
+                                    <p class="body6-text f6">臺中新烏日高鐵站下車，搭乘接駁車或火車至臺中火車站，再轉搭
+                                        公車至道禾六藝文化館</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="body6-right p-5">
+                            <h1 class="py-4 f4 color2 fw-bold">討論留言區</h1>
+                            <form onsubmit="message_submit()">
+                                <div class="form-floating my-4">
+                                    <input type="text" class="form-control message-name" placeholder="name" required>
+                                    <label for="">姓名</label>
+                                </div>
+                                <div class="form-floating my-4">
+                                    <input type="email" class="form-control message-email" placeholder="name" required>
+                                    <label for="">電子郵件</label>
+                                </div>
+                                <div class="form-floating my-4">
+                                    <textarea type="text" class="form-control message-text" placeholder="name" required
+                                        style="height: 100px;"></textarea>
+                                    <label for="">留言</label>
+                                </div>
+                                <div class="df justify-content-center aic mt-5">
+                                    <button type="reset" class="btn mx-3">重設</button>
+                                    <button type="submit" class="btn mx-3 message-submit">送出</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="text-center text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="f5">寶島慢播假日市集</h1>
+                    <ul class="df jcc mb-2">
+                        <li class="mx-2 ">
+                            <a href="#body1" class="text-light f7">關於我們</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body2" class="text-light f7">每週主題</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body3" class="text-light f7">活動日歷</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body5" class="text-light f7">統計資訊</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body6" class="text-light f7">服務中心</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12" style="border-bottom: 2px solid #fff;">
+                    <p class="lh mb-2"> 聯絡電話：0947-917-747 有市集-就一起-去市集！<br>
+                        聯絡地址：新北市三重區中正北路560巷38號<br>
+                        聯絡信箱：service@citimambo.com
+                    </p>
+                </div>
+                <div class="col-12 pt-2 df justify-content-between aic flex-lg-row flex-column">
+                    本網站使用bootstarp+javascript製作，響應RWD+AJAX設計&copy;2023-寶島慢播假日市集
+                    <div class="df jcc aic mt-lg-0 mt-3">
+                        <img src="./img/footer/fb.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/ig.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/line.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--  -->
+
+    <a href="#top" class="top-btn">
+        <img src="./img/箭頭.png" alt="">
+    </a>
+    <div class="robot-btn">
+        <img src="./img/機器人.png" alt="">
+    </div>
+    <div class="fs-btn" onclick="fs_click()">
+        A
+    </div>
+
+    <div class="robot-box">
+        <div class="robot-header">
+            <h1 class="m-0 f5 fw-bold text-center">寶島慢播機器人</h1>
+        </div>
+        <div class="robot-body text-light">
+            <p>
+                <span class="robot-mess">
+                    您好~我是寶島慢播機器人，有任何的問題都可詢問我喔^_^
+                </span>
+            </p>
+        </div>
+        <div class="robot-footer">
+            <input type="text" class="robot-input" placeholder="請輸入內容" list="robot-datalist">
+            <datalist id="robot-datalist">
+                <option value="關於我們"></option>
+                <option value="每週主題"></option>
+                <option value="主題特色"></option>
+            </datalist>
+            <button class="robot-submit btn">送出</button>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade text-dark" id="no-wifi">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="f5 m-0 fw-bold">網站顯示</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">您目前尚未連接網路，請帶連接後再試一次</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="login">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">登入帳號</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">帳號：</label>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" placeholder="電子郵件">
+                            <label for="">電子郵件或電話號碼</label>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">密碼：</label>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" placeholder="電子郵件" required>
+                            <label for="">密碼</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn login-btn" data-bs-dismiss="modal">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="logout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">帳號資訊</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">目前尚未連線網路，無法常看帳號相關資訊</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal" onclick="logout()">登出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
