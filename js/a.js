@@ -1,6 +1,27 @@
 const q = document.querySelector.bind(document)
 const qa = document.querySelectorAll.bind(document)
 
+// 
+
+var body2_left_swiper = new Swiper('.body2-left-swiper',{
+    spaceBetween:10,
+})
+var body2_right_swiper = new Swiper('.body2-right-swiper',{
+    spaceBetween:10,
+    controller:{
+        control:body2_left_swiper,
+    },
+    autoplay:{
+        delay:3000,
+        disableOnInteraction:false,
+    },   
+    navigation:{
+        prevEl:'.body2-swiper-prev',
+        nextEl:'.body2-swiper-next'
+    }
+})
+body2_left_swiper.controller.control = body2_right_swiper
+
 var rrr = 0
 q('.robot-btn').addEventListener('click', () => {
     gsap.from('.robot-btn img', {

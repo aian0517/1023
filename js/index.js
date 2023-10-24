@@ -171,7 +171,7 @@ var body2_card_swiper = new Swiper('.body2-card-swiper',{
 })
 mobile.forEach((item, index) => {
     body2_swiper.appendSlide(`
-    <div class="swiper-slide col-lg-3 col-12">
+    <div class="swiper-slide">
         <div id="${item}" class="eeee ${index === 0 || index === 2 ? 'body2-btn' : 'body2-btn2'} ${item === mobile_click ? 'active' : ''}" onclick="body2_btn_click(event)">
             <p class="f7">${mobile_title[index].p}</p>
             <h1 class="f5">${mobile_title[index].title}<br>
@@ -198,7 +198,6 @@ gsap.to('.body2-btn2', {
 
 function mobile_fun() {
     body2_card_swiper.removeAllSlides()
-    const sss = mobile_data[mobile_click]
     mobile_card_data[mobile_click].forEach((item) =>{
         body2_card_swiper.appendSlide(`
         <div class="swiper-slide">
@@ -213,6 +212,7 @@ function mobile_fun() {
         `)
     })
     q('.body2-a').innerText =`點我查看更多${mobile_click}活動資訊`
+    q('.body2-a').href = `${body2_href[mobile_click]}`
     var body2_img_gsap = gsap.timeline()
     .to('.body2-card', {
         autoAlpha: 0,
