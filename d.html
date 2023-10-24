@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多元文化探索</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./a.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/chart.umd.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <script src="./js/aframe-v1.4.2.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3 navbar-dark fixed-top">
+        <div class="container-fluid col-lg-10 col-12">
+            <a href="index.html" class="navbar-brand f5 mx-auto">寶島慢播假日市集</a>
+            <div class="nav order-lg-2 order-0">
+                <a href="index.html" class="nav-link df jcc aic">
+                    <img src="./img/nav/nav-icon-message.png" alt="" class="nav-icon">
+                </a>
+                <div class="nav-link df jcc aic nav-login text-light ">
+                    <img src="./img/nav/nav-icon-login.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic"
+                    onclick="window.open('index.html','_blank','top=150,left=150,width=500px,height=750px')">
+                    <img src="./img/nav/nav-icon-phone.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic" onclick="sun()">
+                    <img src="./img/nav/nav-icon-sun.png" alt="" class="nav-icon nav-icon-sun">
+                </div>
+                <div class="nav-link df jcc aic" data-bs-toggle="modal" data-bs-target="#no-wifi">
+                    <img src="./img/nav/nav-icon-wifi.png" alt="" class="nav-icon">
+                </div>
+            </div>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a href="index.html" class="nav-link f7">首頁</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body1" class="nav-link f7">活動資訊</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body2" class="nav-link f7">主題特色</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+
+    </header>
+    <main>
+        <section id="body1">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">活動<span class="color2 f-title">資訊</span></h1>
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
+                            <h1 class="fw-bold f4 mb-3 body2-title">國際小吃日</h1>
+                            <p class="f7 body2-p">慢播多個小吃攤位，代表不同國家的美食，
+                                並結合音樂和舞蹈表演，打造多元文化體驗。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic mb-5 py-5">
+                        <h1 class="f3 fw-bold">特色攤位</h1>
+                    </div>
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img2.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
+                            <h1 class="fw-bold f4 mb-3 body2-title">多元文化飾品</h1>
+                            <p class="f7 body2-p">展示代表不同文化的飾品設計，
+                                並邀請當地藝術家解釋其文化背景和設計靈感</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 mb-lg-0 mb-3  df jcc aic fdc">
+                        <h1 class="f3 fw-bold mb-3">表演項目</h1>
+                        <h1 class="f5 mb-3">多國舞蹈和音樂表演</h1>
+                        <p class="lh lep f7">歡迎來到「多元文化探索」
+                            主題週！我們將為您呈現多國文化的舞蹈和音樂表演，
+                            展示不同國家的藝術風格。您將欣賞到多元文化的精
+                            彩，感受來自世界各地的音樂和舞蹈帶來的多樣性。
+                            這將是一場令人難忘的國際藝術之旅
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic mb-lg-0 mb-3">
+                        <img src="./img/a/img3.png" alt="" class="body1-img">
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic">
+                        <p class="f6 lh">
+                            第一個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週五晚上 7:30 - 9:30</span><br>
+                            第二個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週六下午 3:30 - 下午5:30</span><br>
+                            第三個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週日下午 4:00 - 下午6:00（閉幕週的特別表演時段）</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="body2">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">主題<span class="color2 f-title">特色</span></h1>
+                    <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                        <div class="swiper body2-left-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">性別平等區域</h1>
+                                        <p class="f7">這個區域我們專注於性
+                                            別平等和多元性別議題。提供一系列商品，
+                                            包括性別平等的 T恤、饰品、藝術品、書籍等，以推動對性別平
+                                            等的討論和支持。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">跨界藝術區域</h1>
+                                        <p class="f7">邀請跨界藝術家參與，
+                                            展示融合不同藝術形式的作品，如視覺藝術、
+                                            音樂、舞蹈和表演。這將鼓勵跨文化和跨藝術領域的交流。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">社會企業和 NGO 展示</h1>
+                                        <p class="f7">提供一個展示社會企業和非政府組織
+                                            （NGO）產品的區域。這些組織通常關注
+                                            社會和環境議題，他們的商品包括可持續產品、支持弱勢社群的商品等</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">多元文化美食區域</h1>
+                                        <p class="f7">提供來自不同文化的美
+                                            食和料理，包括素食選擇，讓您能品味世界各
+                                            地的風味。這也可以是一個跨文化食品節，讓
+                                            人們一同享受不同文化的美味。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="swiper body2-right-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img4.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img5.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img6.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img7.png" alt="" class="body2-img">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev body2-swiper-prev"></div>
+                            <div class="swiper-button-next body2-swiper-next"></div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="f5">寶島慢播假日市集</h1>
+                    <ul class="df jcc mb-2">
+                        <li class="mx-2">
+                            <a href="index.html" class="text-light f7">首頁</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body1" class="text-light f7">活動資訊</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body" class="text-light f7">主題特色</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12" style="border-bottom: 2px solid #fff;">
+                    <p class="lh mb-2"> 聯絡電話：0947-917-747 有市集-就一起-去市集！<br>
+                        聯絡地址：新北市三重區中正北路560巷38號<br>
+                        聯絡信箱：service@citimambo.com
+                    </p>
+                </div>
+                <div class="col-12 pt-2 df justify-content-between aic flex-lg-row flex-column">
+                    本網站使用bootstarp+javascript製作，響應RWD+AJAX設計&copy;2023-寶島慢播假日市集
+                    <div class="df jcc aic mt-lg-0 mt-3">
+                        <img src="./img/footer/fb.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/ig.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/line.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class="top-btn">
+        <img src="./img/箭頭.png" alt="">
+    </a>
+    <div class="robot-btn">
+        <img src="./img/機器人.png" alt="">
+    </div>
+    <div class="fs-btn" onclick="fs_click()">
+        A
+    </div>
+
+    <div class="robot-box">
+        <div class="robot-header">
+            <h1 class="m-0 f5 fw-bold text-center">寶島慢播機器人</h1>
+        </div>
+        <div class="robot-body text-light">
+            <p>
+                <span class="robot-mess">
+                    您好~我是寶島慢播機器人，有任何的問題都可詢問我喔^_^
+                </span>
+            </p>
+        </div>
+        <div class="robot-footer">
+            <input type="text" class="robot-input" placeholder="請輸入內容" list="robot-datalist">
+            <datalist id="robot-datalist">
+                <option value="關於我們"></option>
+                <option value="每週主題"></option>
+                <option value="主題特色"></option>
+            </datalist>
+            <button class="robot-submit btn">送出</button>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade text-dark" id="no-wifi">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="f5 m-0 fw-bold">網站顯示</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">您目前尚未連接網路，請帶連接後再試一次</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="login">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">登入帳號</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">帳號：</label>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" placeholder="電子郵件">
+                            <label for="">電子郵件或電話號碼</label>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">密碼：</label>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" placeholder="電子郵件" required>
+                            <label for="">密碼</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn login-btn" data-bs-dismiss="modal">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="logout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">帳號資訊</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">目前尚未連線網路，無法常看帳號相關資訊</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal" onclick="logout()">登出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/a.js"></script>
+</body>
+
+</html>

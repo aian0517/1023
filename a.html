@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>歷史之旅</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./a.css">
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/chart.umd.js"></script>
@@ -15,29 +17,27 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/data.js"></script>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg py-3 navbar-dark fixed-top">
         <div class="container-fluid col-lg-10 col-12">
             <a href="index.html" class="navbar-brand f5 mx-auto">寶島慢播假日市集</a>
             <div class="nav order-lg-2 order-0">
-                <!-- <a href="#body6" class="nav-link df jcc aic" >
+                <a href="index.html" class="nav-link df jcc aic">
                     <img src="./img/nav/nav-icon-message.png" alt="" class="nav-icon">
-                </a> -->
-                <!-- <a href="#body4'" class="nav-link df jcc aic">
-                    <img src="./img/nav/nav-icon-shop.png" alt="" class="nav-icon">
-                </a> -->
+                </a>
                 <div class="nav-link df jcc aic nav-login text-light ">
                     <img src="./img/nav/nav-icon-login.png" alt="" class="nav-icon">
                 </div>
-                <div class="nav-link df jcc aic" onclick="window.open('index.html','_blank','top=150,left=150,width=500px,height=750px')">
-                    <img src="./img/nav/nav-icon-phone.png" alt="" class="nav-icon" 
-                    >
+                <div class="nav-link df jcc aic"
+                    onclick="window.open('index.html','_blank','top=150,left=150,width=500px,height=750px')">
+                    <img src="./img/nav/nav-icon-phone.png" alt="" class="nav-icon">
                 </div>
                 <div class="nav-link df jcc aic" onclick="sun()">
-                    <img src="./img/nav/nav-icon-sun.png" alt="" class="nav-icon nav-icon-sun" >
+                    <img src="./img/nav/nav-icon-sun.png" alt="" class="nav-icon nav-icon-sun">
                 </div>
                 <div class="nav-link df jcc aic" data-bs-toggle="modal" data-bs-target="#no-wifi">
-                    <img src="./img/nav/nav-icon-wifi.png" alt="" class="nav-icon" >
+                    <img src="./img/nav/nav-icon-wifi.png" alt="" class="nav-icon">
                 </div>
             </div>
             <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -54,38 +54,167 @@
                     <li class="nav-item mx-3">
                         <a href="#body2" class="nav-link f7">主題特色</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
     </nav>
     <header>
-        
+
     </header>
     <main>
         <section id="body1">
             <div class="container py-5">
                 <div class="row py-5">
                     <h1 class="f1 py-5 fw-bold color1 text-center">活動<span class="color2 f-title">資訊</span></h1>
-                    <div class="col-lg-4 col-12 position-relative">
-                        <img src="./img/body2/img.png" alt="" class="body2-img">
-                        <div class="body2-text px-3">
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
                             <h1 class="fw-bold f4 mb-3 body2-title">飾品創作工作坊活動</h1>
                             <p class="f7 body2-p">慢播市集提供不同時代風格的飾品創作工作坊，包括古典、
-                                文藝復興和近代風格。</p>
+                                文藝復興和近代風格</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-12">
-                        <h1 class="f2">特色攤位</h1>
+                    <div class="col-lg-4 col-12 df jcc aic mb-5 py-5">
+                        <h1 class="f3 fw-bold">特色攤位</h1>
                     </div>
-                    <div class="col-lg-4 col-12">
-
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img2.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
+                            <h1 class="fw-bold f4 mb-3 body2-title">街坊美食之旅</h1>
+                            <p class="f7 body2-p">慢播小幫手擔當導覽團，帶領您參觀城市的歷史區域，
+                                並品味傳統的街坊小吃，如古早味冰品和台中的老店糕餅。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 mb-lg-0 mb-3  df jcc aic fdc">
+                        <h1 class="f3 fw-bold mb-3">表演項目</h1>
+                        <h1 class="f5 mb-3">「歷史之旅」歷史故事講述</h1>
+                        <p class="lh lep f7">歡迎大家參加我們「歷史之旅」主題週的精彩活動！在
+                            這個主題週的舞台上，我們將有專業的故事講述者為您
+                            呈現城市的歷史故事。這是一次穿越時光的機會，讓您
+                            沉浸在城市的過去，聆聽傳說和故事，感受歷史的魅力。
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic mb-lg-0 mb-3">
+                        <img src="./img/a/img3.png" alt="" class="body1-img">
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic">
+                        <p class="f6 lh">
+                            第一個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週五晚上 7:00 - 9:00</span><br>
+                            第二個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週六上午 10:00 - 上午12:00</span><br>
+                            第三個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週日下午 2:00 - 下午4:00</span>
+                        </p>
                     </div>
 
                 </div>
             </div>
         </section>
+        <section id="body2">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">主題<span class="color2 f-title">特色</span></h1>
+                    <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                        <div class="swiper body2-left-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">近代風格飾品</h1>
+                                        <p class="f7">展示<span class="color2 fw-bold f6">近代風格的飾品</span>，如藝術裝飾風格或 20
+                                            世紀初的藝術運動。這可以包括具有幾何圖
+                                            案、抽象設計或藝術家的獨特風格的飾品。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">歷史主題飾品</h1>
+                                        <p class="f7">創作以城市歷史事件、建築或人物為主題的飾
+                                            品，這些飾品可以包括刻有歷史細節的項鍊、胸針或手錶。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">傳統手工飾品</h1>
+                                        <p class="f7">展示古老的手工藝技巧，如琺瑯工藝、金屬
+                                            鍛造、織布等。這些飾品可以是經過傳統方式
+                                            製作的，彰顯歷史工藝的精湛。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">時代混搭風格</h1>
+                                        <p class="f7">創造一種混搭風格，將
+                                            不同歷史時代的元素結合在一起，創作出獨特
+                                            的風格，這可以是現代設計中融入古老元素的飾品
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="swiper body2-right-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img4.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img5.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img6.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img7.png" alt="" class="body2-img">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev body2-swiper-prev"></div>
+                            <div class="swiper-button-next body2-swiper-next"></div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="text-center text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="f5">寶島慢播假日市集</h1>
+                    <ul class="df jcc mb-2">
+                        <li class="mx-2">
+                            <a href="index.html" class="text-light f7">首頁</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body1" class="text-light f7">活動資訊</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body" class="text-light f7">主題特色</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12" style="border-bottom: 2px solid #fff;">
+                    <p class="lh mb-2"> 聯絡電話：0947-917-747 有市集-就一起-去市集！<br>
+                        聯絡地址：新北市三重區中正北路560巷38號<br>
+                        聯絡信箱：service@citimambo.com
+                    </p>
+                </div>
+                <div class="col-12 pt-2 df justify-content-between aic flex-lg-row flex-column">
+                    本網站使用bootstarp+javascript製作，響應RWD+AJAX設計&copy;2023-寶島慢播假日市集
+                    <div class="df jcc aic mt-lg-0 mt-3">
+                        <img src="./img/footer/fb.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/ig.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/line.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <a href="#top" class="top-btn">
         <img src="./img/箭頭.png" alt="">
     </a>
@@ -182,4 +311,5 @@
     </div>
     <script src="./js/a.js"></script>
 </body>
+
 </html>

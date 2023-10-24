@@ -1,11 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>城市大自然</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./a.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/chart.umd.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <script src="./js/aframe-v1.4.2.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/data.js"></script>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg py-3 navbar-dark fixed-top">
+        <div class="container-fluid col-lg-10 col-12">
+            <a href="index.html" class="navbar-brand f5 mx-auto">寶島慢播假日市集</a>
+            <div class="nav order-lg-2 order-0">
+                <a href="index.html" class="nav-link df jcc aic">
+                    <img src="./img/nav/nav-icon-message.png" alt="" class="nav-icon">
+                </a>
+                <div class="nav-link df jcc aic nav-login text-light ">
+                    <img src="./img/nav/nav-icon-login.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic"
+                    onclick="window.open('index.html','_blank','top=150,left=150,width=500px,height=750px')">
+                    <img src="./img/nav/nav-icon-phone.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic" onclick="sun()">
+                    <img src="./img/nav/nav-icon-sun.png" alt="" class="nav-icon nav-icon-sun">
+                </div>
+                <div class="nav-link df jcc aic" data-bs-toggle="modal" data-bs-target="#no-wifi">
+                    <img src="./img/nav/nav-icon-wifi.png" alt="" class="nav-icon">
+                </div>
+            </div>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a href="index.html" class="nav-link f7">首頁</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body1" class="nav-link f7">活動資訊</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body2" class="nav-link f7">主題特色</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+
+    </header>
+    <main>
+        <section id="body1">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">活動<span class="color2 f-title">資訊</span></h1>
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
+                            <h1 class="fw-bold f4 mb-3 body2-title">自然元素的飾品</h1>
+                            <p class="f7 body2-p">舉辦植物養护和飾品創作工作坊，
+                                參與者可以製作帶有自然元素的飾品，
+                                如樹葉耳環和花朵項鍊</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic mb-5 py-5">
+                        <h1 class="f3 fw-bold">特色攤位</h1>
+                    </div>
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img2.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
+                            <h1 class="fw-bold f4 mb-3 body2-title">戶外美食體驗</h1>
+                            <p class="f7 body2-p">安排戶外野餐活動，
+                                提供當季的自然食材，如野菜、水果和野生草本植物</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 mb-lg-0 mb-3  df jcc aic fdc">
+                        <h1 class="f3 fw-bold mb-3">表演項目</h1>
+                        <h1 class="f5 mb-3">大自然音樂會</h1>
+                        <p class="lh lep f7">歡迎來到「城市大自然」主
+                            題週！在我們的戶外舞台上，您將享受到大自然音樂
+                            會的精彩表演。音樂家們將以大自然為靈感，演奏美麗
+                            的音樂，讓您感受大自然的和諧之美。一場讓您與自然
+                            連結的音樂體驗即將展開！
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic mb-lg-0 mb-3">
+                        <img src="./img/a/img3.png" alt="" class="body1-img">
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic">
+                        <p class="f6 lh">
+                            第一個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週六上午 11:00 - 下午1:00</span><br>                           
+                            第二個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週日下午 3:00 - 下午5:00</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="body2">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">主題<span class="color2 f-title">特色</span></h1>
+                    <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                        <div class="swiper body2-left-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">多肉植物養護工作坊</h1>
+                                        <p class="f7">舉辦多肉植物養護工作坊，
+                                            向參與者提供如何照顧和種植多肉植物的實用技巧。
+                                            這可以包括植物選擇、照顧方法和繁殖技巧。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">多肉植物裝飾飾品</h1>
+                                        <p class="f7">展示多肉植物裝飾飾品，
+                                            如多肉懸吊球、多肉筆筒等，並提供相關工作坊，讓參與者可以
+                                            製作自己的多肉裝飾品。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="swiper body2-right-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img4.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img5.png" alt="" class="body2-img">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev body2-swiper-prev"></div>
+                            <div class="swiper-button-next body2-swiper-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="f5">寶島慢播假日市集</h1>
+                    <ul class="df jcc mb-2">
+                        <li class="mx-2">
+                            <a href="index.html" class="text-light f7">首頁</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body1" class="text-light f7">活動資訊</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body" class="text-light f7">主題特色</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12" style="border-bottom: 2px solid #fff;">
+                    <p class="lh mb-2"> 聯絡電話：0947-917-747 有市集-就一起-去市集！<br>
+                        聯絡地址：新北市三重區中正北路560巷38號<br>
+                        聯絡信箱：service@citimambo.com
+                    </p>
+                </div>
+                <div class="col-12 pt-2 df justify-content-between aic flex-lg-row flex-column">
+                    本網站使用bootstarp+javascript製作，響應RWD+AJAX設計&copy;2023-寶島慢播假日市集
+                    <div class="df jcc aic mt-lg-0 mt-3">
+                        <img src="./img/footer/fb.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/ig.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/line.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class="top-btn">
+        <img src="./img/箭頭.png" alt="">
+    </a>
+    <div class="robot-btn">
+        <img src="./img/機器人.png" alt="">
+    </div>
+    <div class="fs-btn" onclick="fs_click()">
+        A
+    </div>
+
+    <div class="robot-box">
+        <div class="robot-header">
+            <h1 class="m-0 f5 fw-bold text-center">寶島慢播機器人</h1>
+        </div>
+        <div class="robot-body text-light">
+            <p>
+                <span class="robot-mess">
+                    您好~我是寶島慢播機器人，有任何的問題都可詢問我喔^_^
+                </span>
+            </p>
+        </div>
+        <div class="robot-footer">
+            <input type="text" class="robot-input" placeholder="請輸入內容" list="robot-datalist">
+            <datalist id="robot-datalist">
+                <option value="關於我們"></option>
+                <option value="每週主題"></option>
+                <option value="主題特色"></option>
+            </datalist>
+            <button class="robot-submit btn">送出</button>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade text-dark" id="no-wifi">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="f5 m-0 fw-bold">網站顯示</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">您目前尚未連接網路，請帶連接後再試一次</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="login">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">登入帳號</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">帳號：</label>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" placeholder="電子郵件">
+                            <label for="">電子郵件或電話號碼</label>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">密碼：</label>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" placeholder="電子郵件" required>
+                            <label for="">密碼</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn login-btn" data-bs-dismiss="modal">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="logout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">帳號資訊</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">目前尚未連線網路，無法常看帳號相關資訊</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal" onclick="logout()">登出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/a.js"></script>
 </body>
+
 </html>

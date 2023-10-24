@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>街頭藝術之旅</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./a.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/chart.umd.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <script src="./js/aframe-v1.4.2.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3 navbar-dark fixed-top">
+        <div class="container-fluid col-lg-10 col-12">
+            <a href="index.html" class="navbar-brand f5 mx-auto">寶島慢播假日市集</a>
+            <div class="nav order-lg-2 order-0">
+                <a href="index.html" class="nav-link df jcc aic">
+                    <img src="./img/nav/nav-icon-message.png" alt="" class="nav-icon">
+                </a>
+                <div class="nav-link df jcc aic nav-login text-light ">
+                    <img src="./img/nav/nav-icon-login.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic"
+                    onclick="window.open('index.html','_blank','top=150,left=150,width=500px,height=750px')">
+                    <img src="./img/nav/nav-icon-phone.png" alt="" class="nav-icon">
+                </div>
+                <div class="nav-link df jcc aic" onclick="sun()">
+                    <img src="./img/nav/nav-icon-sun.png" alt="" class="nav-icon nav-icon-sun">
+                </div>
+                <div class="nav-link df jcc aic" data-bs-toggle="modal" data-bs-target="#no-wifi">
+                    <img src="./img/nav/nav-icon-wifi.png" alt="" class="nav-icon">
+                </div>
+            </div>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a href="index.html" class="nav-link f7">首頁</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body1" class="nav-link f7">活動資訊</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#body2" class="nav-link f7">主題特色</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+
+    </header>
+    <main>
+        <section id="body1">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">活動<span class="color2 f-title">資訊</span></h1>
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
+                            <h1 class="fw-bold f4 mb-3 body2-title">藝術家市集攤位</h1>
+                            <p class="f7 body2-p">邀請街頭藝術家現場創作藝術作品，
+                                您可以觀看他們的創作過程，並購買喜愛的藝術品。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic mb-5 py-5">
+                        <h1 class="f3 fw-bold">特色攤位</h1>
+                    </div>
+                    <div class="col-lg-4 col-12 position-relative overflow-hidden p-0 eee mb-5">
+                        <img src="./img/a/img2.png" alt="" class="body1-img">
+                        <div class="body1-text px-3 text-light">
+                            <h1 class="fw-bold f4 mb-3 body2-title">街頭美食小吃</h1>
+                            <p class="f7 body2-p">呈現不同國家的街頭小吃，
+                                如西洋塔可、烤玉米、墨西哥捲餅等，
+                                更有南洋風味特色咖哩與之較勁。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 mb-lg-0 mb-3  df jcc aic fdc">
+                        <h1 class="f3 fw-bold mb-3">表演項目</h1>
+                        <h1 class="f5 mb-3">街頭藝術表演</h1>
+                        <p class="lh lep f7">來到「街頭藝術之旅」主題週，
+                            您將沉浸在一場驚艷的藝術盛會中！街頭藝術家們將在我們的舞台上進行現場表演，
+                            包括塗鴉、街舞和音樂演出。
+                            這是一次近距離欣賞街頭藝術的絕佳機會，融入城市藝術的奇妙世界！
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic mb-lg-0 mb-3">
+                        <img src="./img/a/img3.png" alt="" class="body1-img">
+                    </div>
+                    <div class="col-lg-4 col-12 df jcc aic">
+                        <p class="f6 lh">
+                            第一個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週五晚上 8:00 - 10:00</span><br>
+                            第二個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週六下午 1:00 - 下午 3:00</span><br>
+                            第三個舞台表演：<br>
+                            <span class="color2 fw-bold f5">週日上午 11:00 - 上午 1:00</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="body2">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <h1 class="f1 py-5 fw-bold color1 text-center">主題<span class="color2 f-title">特色</span></h1>
+                    <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                        <div class="swiper body2-left-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">跨文化塗鴉牆</h1>
+                                        <p class="f7">設立一個大型的塗鴉牆，
+                                            供參與者發揮創意，創作屬於自己的街頭藝術作品。
+                                            提供塗鴉噴漆和畫筆，讓您盡情表現。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">藝術家工作坊</h1>
+                                        <p class="f7">邀請當地街頭藝術家主持工作坊，
+                                            教授塗鴉、塗鴉藝術技巧、塗鴉藝術史等。
+                                            本週參與者可以學習並嘗試創作自己的街頭藝術作品</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">藝術品展覽</h1>
+                                        <p class="f7">展示當地和國際街頭藝術家的作品，
+                                            包括塗鴉、塗鴉畫、街頭雕塑等。
+                                            這可以是一個室內藝廊，供您瀏覽欣賞和購買藝術品。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">街頭音樂表演</h1>
+                                        <p class="f7">本週邀請街頭音樂家、樂隊以及 DJ 表演，
+                                            為您提供現場音樂娛樂。
+                                            無論是現場即興演出或預先計劃的表演絕對深得您心！
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">藝術家互動</h1>
+                                        <p class="f7">
+                                            邀請藝術家在現場創作街頭藝術作品，並與參與者互動。
+                                            這可以讓您親身見證藝術的創作過程。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="w-100 h-100 df jcc aic fdc">
+                                        <h1 class="f4 fw-bold mb-3">藝術品販售</h1>
+                                        <p class="f7">
+                                            提供藝術家的作品販售，讓您購買並收藏街
+                                            頭藝術品。這也是支持當地藝術家的好方式。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="swiper body2-right-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img4.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img5.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img6.png" alt="" class="body2-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/a/img7.png" alt="" class="body2-img">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev body2-swiper-prev"></div>
+                            <div class="swiper-button-next body2-swiper-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="f5">寶島慢播假日市集</h1>
+                    <ul class="df jcc mb-2">
+                        <li class="mx-2">
+                            <a href="index.html" class="text-light f7">首頁</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body1" class="text-light f7">活動資訊</a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#body" class="text-light f7">主題特色</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12" style="border-bottom: 2px solid #fff;">
+                    <p class="lh mb-2"> 聯絡電話：0947-917-747 有市集-就一起-去市集！<br>
+                        聯絡地址：新北市三重區中正北路560巷38號<br>
+                        聯絡信箱：service@citimambo.com
+                    </p>
+                </div>
+                <div class="col-12 pt-2 df justify-content-between aic flex-lg-row flex-column">
+                    本網站使用bootstarp+javascript製作，響應RWD+AJAX設計&copy;2023-寶島慢播假日市集
+                    <div class="df jcc aic mt-lg-0 mt-3">
+                        <img src="./img/footer/fb.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/ig.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                        <img src="./img/footer/line.png" alt="" class="footer-img" data-bs-toggle="modal"
+                            data-bs-target="#no-wifi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class="top-btn">
+        <img src="./img/箭頭.png" alt="">
+    </a>
+    <div class="robot-btn">
+        <img src="./img/機器人.png" alt="">
+    </div>
+    <div class="fs-btn" onclick="fs_click()">
+        A
+    </div>
+
+    <div class="robot-box">
+        <div class="robot-header">
+            <h1 class="m-0 f5 fw-bold text-center">寶島慢播機器人</h1>
+        </div>
+        <div class="robot-body text-light">
+            <p>
+                <span class="robot-mess">
+                    您好~我是寶島慢播機器人，有任何的問題都可詢問我喔^_^
+                </span>
+            </p>
+        </div>
+        <div class="robot-footer">
+            <input type="text" class="robot-input" placeholder="請輸入內容" list="robot-datalist">
+            <datalist id="robot-datalist">
+                <option value="關於我們"></option>
+                <option value="每週主題"></option>
+                <option value="主題特色"></option>
+            </datalist>
+            <button class="robot-submit btn">送出</button>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade text-dark" id="no-wifi">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="f5 m-0 fw-bold">網站顯示</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">您目前尚未連接網路，請帶連接後再試一次</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="login">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">登入帳號</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">帳號：</label>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" placeholder="電子郵件">
+                            <label for="">電子郵件或電話號碼</label>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <label for="" class="mb-3 form-label f6 color2 fw-bold lep">密碼：</label>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" placeholder="電子郵件" required>
+                            <label for="">密碼</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn login-btn" data-bs-dismiss="modal">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-dark" id="logout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fw-bold f5 m-0">帳號資訊</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="f7">目前尚未連線網路，無法常看帳號相關資訊</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal" onclick="logout()">登出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/a.js"></script>
+</body>
+
+</html>
